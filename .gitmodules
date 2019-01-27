@@ -1,0 +1,3 @@
+[submodule "orgs"]
+	path = orgs
+	url = https://github.com/dialogue-evaluation/AGRR-2019.git
