@@ -1,0 +1,39 @@
+data_dir: data/fold-1
+
+seed: 42
+
+task_name: agrr
+bert_model: bert-base-multilingual-cased
+output_dir: output/fold-1
+validation_interval: 50
+
+train_file: train.csv
+train_batch_size: 32
+accumulation_iters: 1
+
+dev_file: valid.csv
+dev_batch_size: 32
+
+max_seq_length: 128
+do_lower_case: False
+
+num_workers: 2
+
+learning_rate: 0.00001
+
+train_stages:
+
+    order: [train_head, finetune]
+
+    train_head:
+        groups: [sentence_classifier, full_annotation_classifier]
+        num_cycles: 1
+        epochs: 2
+        learning_rate: 0.001
+        warmup_ratio: 0.2
+
+    finetune:
+        num_cycles: 3
+        epochs: 2
+        learning_rate: 0.00002
+        warmup_ratio: 0.1

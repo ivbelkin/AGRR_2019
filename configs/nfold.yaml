@@ -1,0 +1,6 @@
+input_dir: data
+input_file: train_dev.csv
+output_dir: data
+
+seed: 42
+n_folds: 5
