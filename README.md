@@ -1,5 +1,7 @@
 # Winning solution of 'Automatic Gapping Resolution for Russian' track of 'Dialogue Evaluation 2019'
 
+Results: https://github.com/dialogue-evaluation/AGRR-2019
+
 Описание решения:
 Решаем как задачу тегирования токенов и классификации.
  
